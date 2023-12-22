@@ -15,7 +15,10 @@ const Banner = () => {
       <div className="col-span-2">
         <h2 className="mb-2 text-7xl">Summer Sale Stylish</h2>
         <h2 className="mb-3 text-8xl">Womens</h2>
-        <button className="text-lg font-medium">Discover More</button>
+        <div className="text-[#222222]">
+          <button className="text-lg font-medium">Discover More</button>
+          <div className="w-20 transition-all hover:w-[120px] h-1 bg-[#222222]"></div>
+        </div>
       </div>
       <div>
         <img className="h-full" src={banner1} alt="" />
