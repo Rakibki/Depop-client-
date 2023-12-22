@@ -7,8 +7,9 @@ import { FaRegHeart } from "react-icons/fa6";
 const Navber = () => {
   const navItems = (
     <div className="flex gap-6">
-      <li><NavLink>HOME</NavLink></li>
-      <li><NavLink>BLOG</NavLink></li>
+      <li><NavLink>Home</NavLink></li>
+      <li><NavLink>Blog</NavLink></li>
+      <li><NavLink>Products</NavLink></li>
     </div>
   );
 

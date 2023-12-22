@@ -5,7 +5,9 @@
     "image": "https://uomo-html.flexkitux.com/images/products/product_0.jpg",
     "price": 449,
     "ratting": 4.5,
-    "quantity": 10
+    "quantity": 10,
+    "sime": "small",
+    "color": "black"
   },
   {
     "title": "Cropped Faux Leather Jacket",
@@ -13,7 +15,9 @@
     "image": "https://uomo-html.flexkitux.com/images/products/product_1-1.jpg",
     "price": 249,
     "ratting": 4.5,
-    "quantity": 10
+    "quantity": 10,
+    "sime": "medium",
+    "color": "yellow"
   },
   {
     "title": "Calvin Shorts",
@@ -21,7 +25,9 @@
     "image": "https://uomo-html.flexkitux.com/images/products/product_2-1.jpg",
     "price": 200,
     "ratting": 4.5,
-    "quantity": 10
+    "quantity": 10,
+    "sime": "large",
+    "color": "red"
   },
   {
     "title": "Kirby T-Shirt",
@@ -29,7 +35,9 @@
     "image": "https://uomo-html.flexkitux.com/images/products/product_3-1.jpg",
     "price": 50,
     "ratting": 5,
-    "quantity": 10
+    "quantity": 10,
+    "sime": "medium",
+    "color": "orange"
   },
   {
     "title": "Cableknit Shawl",
@@ -37,7 +45,9 @@
     "image": "https://uomo-html.flexkitux.com/images/products/product_4-1.jpg",
     "price": 150,
     "ratting": 5,
-    "quantity": 10
+    "quantity": 10,
+    "sime": "large",
+    "color": "yellow"
   },
   {
     "title": "Colorful Jacket",
@@ -45,7 +55,9 @@
     "image": "https://uomo-html.flexkitux.com/images/products/product_5-1.jpg",
     "price": 130,
     "ratting": 5,
-    "quantity": 10
+    "quantity": 10,
+    "sime": "small",
+    "color": "yellow"
   },
   {
     "title": "Shirt In Botanical Cheetah Print",
@@ -53,7 +65,9 @@
     "image": "https://uomo-html.flexkitux.com/Demo1/product1_simple.html",
     "price": 199,
     "ratting": 5,
-    "quantity": 10
+    "quantity": 10,
+    "sime": "large",
+    "color": "blue"
   },
   {
     "title": "Cotton Jersey T-Shirt",
@@ -61,7 +75,9 @@
     "image": "https://uomo-html.flexkitux.com/images/products/product_7-1.jpg",
     "price": 99,
     "ratting": 3,
-    "quantity": 10
+    "quantity": 10,
+    "sime": "small",
+    "color": "white"
   },
   {
     "title": "Cotton Jersey T-Shirt",
@@ -69,6 +85,8 @@
     "image": "https://uomo-html.flexkitux.com/Demo1/product1_simple.html",
     "price": 99,
     "ratting": 3,
-    "quantity": 10
+    "quantity": 10,
+    "sime": "medium",
+    "color": "black"
   }
 ]

@@ -1,13 +1,19 @@
 import Banner from "./Banner";
 import Collection from "./Collection";
-import ProjectSection from "./ProjectSection";
+import Tshirts from "./Tshirts";
+import UpcomingCollection from "./UpcomingCollection";
+import Gallery from "./Gallery";
+import Services from "./Services";
 
 const Home = () => {
   return (
     <div>
       <Banner />
       <Collection />
-      <ProjectSection />
+      <UpcomingCollection />
+      <Tshirts />
+      <Gallery />
+      <Services />
     </div>
   );
 };
