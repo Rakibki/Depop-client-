@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { authContext } from "../../providers/AuthProvaider";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import Loader from "../loader/Loader";
+import {Link} from "react-router-dom"
 
 const MyCard = ({ setOpenCard }) => {
   const { user } = useContext(authContext);
@@ -26,7 +27,7 @@ const MyCard = ({ setOpenCard }) => {
       )}
 
       {myCard?.length > 0 &&
-        myCard?.slice(0, 4)?.map((food) => {
+        myCard?.slice(0, 3)?.map((food) => {
           return (
             <div
               key={food._id}
@@ -53,12 +54,14 @@ const MyCard = ({ setOpenCard }) => {
           <button className="px-6 py-2 rounded-lg hover:opacity-80 bg-[#c32929] border-none font-semibold outline-none text-white">
             Check Out
           </button>
-          <button
-            onClick={() => setOpenCard(false)}
-            className="px-6 py-2  rounded-lg hover:opacity-80 bg-[#c32929] border-none font-semibold outline-none text-white"
-          >
-            View Card
-          </button>
+          <Link to={"/viewCard"}>
+            <button
+              onClick={() => setOpenCard(false)}
+              className="px-6 py-2  rounded-lg hover:opacity-80 bg-[#c32929] border-none font-semibold outline-none text-white"
+            >
+              View Card
+            </button>
+          </Link>
         </div>
       </div>
     </div>

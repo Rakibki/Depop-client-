@@ -77,10 +77,10 @@ const Register = () => {
         <div className="w-[40%] relative">
           <div className="absolute text-white p-6 top-0 w-full h-full bg-[#000000a6]">
             <h2 className="text-center font-bold text-3xl">SIGN UP</h2>
-            <div className="w-16 mb-10 bg-[#ffa41f] mt-3 h-1 mx-auto"></div>
+            <div className="w-16 mb-10 bg-[#c32929] mt-3 h-1 mx-auto"></div>
             <p className="text-center font-medium">
               If you have an account already? So{" "}
-              <span className="text-[#ffa41f] font-semibold">Login Now</span>{" "}
+              <span className="text-[#c32929] font-semibold">Login Now</span>{" "}
               And start ad posting less than a mintue
             </p>
 
@@ -158,13 +158,13 @@ const Register = () => {
               <div className="flex items-center justify-between">
                 <button
                   type="submit"
-                  className="px-5 py-2 mt-2 bg-[#ffa41f] transition-all  text-white font-bold hover:opacity-80"
+                  className="px-5 py-2 mt-2 bg-[#c32929] transition-all  text-white font-bold hover:opacity-80"
                 >
                   Register
                 </button>
               </div>
               <Link to={"/login"}>
-                <p className="mt-3 transition-all hover:underline cursor-pointer hover:text-[#ffa41f]">
+                <p className="mt-3 transition-all hover:underline cursor-pointer hover:text-[#c32929]">
                   Login account
                 </p>
               </Link>

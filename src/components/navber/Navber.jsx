@@ -30,24 +30,55 @@ const Navber = () => {
     },
   });
 
-
-
   const navItems = (
-    <div className="flex gap-6">
+    <div className="flex text-lg font-medium gap-6">
       <li>
-        <NavLink>Home</NavLink>
+        <NavLink
+          to={"/"}
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-[#c32929]" : ""
+          }
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink>Blog</NavLink>
+        <NavLink
+          to={"/products"}
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-[#c32929]" : ""
+          }
+        >
+          Products
+        </NavLink>
       </li>
+
       <li>
-        <NavLink>Products</NavLink>
+        <NavLink
+          to={"/blog"}
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-[#c32929]" : ""
+          }
+        >
+          Blog
+        </NavLink>
+      </li>
+
+      <li>
+        <NavLink
+          to={"/about"}
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-[#c32929]" : ""
+          }
+        >
+          About Us
+        </NavLink>
       </li>
     </div>
   );
 
   return (
-    <div className="navbar overflow-hidden bg-base-100">
+    <div className="navbar py-6 overflow-hidden bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -91,16 +122,14 @@ const Navber = () => {
           >
             <FiShoppingCart className="text-2xl" />
             <div className="badge bg-[#c32929] border-[#c32929] text-white font-semibold absolute -top-3 left-3 badge-secondary">
-              {
-                cardLength ? cardLength : 0
-              }
+              {cardLength ? cardLength : 0}
             </div>
           </div>
 
           {/* card body */}
           <div
             className={` z-50 menu bg-black bg-opacity-60 shadow rounded-box absolute duration-500 transition-all w-[380px] right-16 px-6 py-10 top-20 ${
-              openCard ? "mr-0" : "-mr-[1000px]"
+              openCard ? "translate-x-0" : "-translate-y-[1000px]"
             }`}
           >
             <div className="flex mb-2 items-center justify-between">

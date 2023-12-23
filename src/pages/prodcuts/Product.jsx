@@ -6,6 +6,7 @@ import useAxiosLocal from "../../hooks/useAxiosLocal";
 import { useContext } from "react";
 import { authContext } from "../../providers/AuthProvaider";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
   const axiosLocal = useAxiosLocal();
@@ -13,7 +14,7 @@ const Product = ({ product }) => {
 
   const handleAddToCard = async (product) => {
     if (!user && !user?.email) {
-      toast.warn("Please login first", {
+      return toast.warn("Please login first", {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -24,7 +25,17 @@ const Product = ({ product }) => {
         theme: "light",
       });
     }
-    const res = await axiosLocal.post("/card", { ...product, email: user?.email });
+
+    const res = await axiosLocal.post("/card", {
+      name: product?.name,
+      desc: product?.desc,
+      image: product?.image,
+      price: product?.price,
+      ratting: product?.ratting,
+      quantity: product?.quantity,
+      email: user?.email,
+    });
+
     if (res?.data?.insertedId) {
       toast.success("Card added successfully!", {
         position: "top-center",
@@ -43,7 +54,9 @@ const Product = ({ product }) => {
     <div id="prodctImg" className="hover:relative overflow-hidden z-40">
       <img className="h-[280px] w-full" src={product?.image} alt="" />
       <div className="absolute flex flex-col gap-2 text-xl transition-all top-3 right-[10px]">
-        <FaRegEye className="cursor-pointer" />
+        <Link to={`/product/${product?._id}`}>
+          <FaRegEye className="cursor-pointer" />
+        </Link>
         <FaRegHeart className="cursor-pointer" />
         <BiShoppingBag className="cursor-pointer" />
       </div>
