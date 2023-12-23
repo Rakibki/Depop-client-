@@ -3,18 +3,34 @@ import logo from "../../assets/image/logo.png";
 import { BiShoppingBag } from "react-icons/bi";
 import { FaRegUser } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
+import { useContext } from "react";
+import { authContext } from "../../providers/AuthProvaider";
+import { signOut } from "firebase/auth";
+import auth from "../../firebase/firebase.config";
 
 const Navber = () => {
+  const { user } = useContext(authContext);
+
+  const handleLogout = () => {
+    signOut(auth);
+  };
+
   const navItems = (
     <div className="flex gap-6">
-      <li><NavLink>Home</NavLink></li>
-      <li><NavLink>Blog</NavLink></li>
-      <li><NavLink>Products</NavLink></li>
+      <li>
+        <NavLink>Home</NavLink>
+      </li>
+      <li>
+        <NavLink>Blog</NavLink>
+      </li>
+      <li>
+        <NavLink>Products</NavLink>
+      </li>
     </div>
   );
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar overflow-hidden bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -50,10 +66,26 @@ const Navber = () => {
         <ul className=" menu-horizontal px-1">{navItems}</ul>
       </div>
       <div className="navbar-end">
-        <div className="flex text-2xl gap-4">
+        <div className="flex items-center text-2xl gap-4">
           <BiShoppingBag />
           <FaRegUser />
           <FaRegHeart />
+          <div>
+            {user ? (
+              <button
+                onClick={handleLogout}
+                className=" bg-[#c32929] pb-2 pt-1 px-6 text-lg font-medium rounded-md text-white  hover:opacity-80"
+              >
+                Logout
+              </button>
+            ) : (
+              <Link to={"/login"}>
+                <button className=" bg-[#c32929] pb-2 pt-1 px-6 text-lg font-medium rounded-md text-white  hover:opacity-80">
+                  Login
+                </button>
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </div>
