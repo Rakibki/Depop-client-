@@ -1,19 +1,36 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/image/logo.png";
-import { BiShoppingBag } from "react-icons/bi";
 import { FaRegUser } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { authContext } from "../../providers/AuthProvaider";
 import { signOut } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
+import { MdOutlineClose } from "react-icons/md";
+import { FiShoppingCart } from "react-icons/fi";
+import MyCard from "./MyCard";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
+import { useQuery } from "@tanstack/react-query";
 
 const Navber = () => {
   const { user } = useContext(authContext);
+  const [openCard, setOpenCard] = useState(false);
+  const axiosSecure = useAxiosSecure();
 
   const handleLogout = () => {
     signOut(auth);
   };
+
+  const { data: cardLength } = useQuery({
+    queryKey: ["cardLength"],
+    enabled: !!user?.email,
+    queryFn: async () => {
+      const res = await axiosSecure.get(`/cardLength/${user?.email}`);
+      return res?.data?.count;
+    },
+  });
+
+
 
   const navItems = (
     <div className="flex gap-6">
@@ -67,7 +84,40 @@ const Navber = () => {
       </div>
       <div className="navbar-end">
         <div className="flex items-center text-2xl gap-4">
-          <BiShoppingBag />
+          {/* shopping card */}
+          <div
+            onClick={() => setOpenCard(!openCard)}
+            className="relative mr-6 cursor-pointer"
+          >
+            <FiShoppingCart className="text-2xl" />
+            <div className="badge bg-[#c32929] border-[#c32929] text-white font-semibold absolute -top-3 left-3 badge-secondary">
+              {
+                cardLength ? cardLength : 0
+              }
+            </div>
+          </div>
+
+          {/* card body */}
+          <div
+            className={` z-50 menu bg-black bg-opacity-60 shadow rounded-box absolute duration-500 transition-all w-[380px] right-16 px-6 py-10 top-20 ${
+              openCard ? "mr-0" : "-mr-[1000px]"
+            }`}
+          >
+            <div className="flex mb-2 items-center justify-between">
+              <h1 className="text-xl text-white">Shoping Cart</h1>
+              <h1>
+                <MdOutlineClose
+                  onClick={() => setOpenCard(false)}
+                  className="text-3xl text-[#c32929] cursor-pointer "
+                />
+              </h1>
+            </div>
+            <hr />
+
+            {/* body */}
+            <MyCard setOpenCard={setOpenCard} />
+          </div>
+
           <FaRegUser />
           <FaRegHeart />
           <div>
