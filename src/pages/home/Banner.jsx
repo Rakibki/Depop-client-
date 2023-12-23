@@ -10,18 +10,20 @@ const Banner = () => {
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
-      className="grid items-center overflow-hidden h-screen p-16 bg-[#f5e6e0] grid-cols-3"
+      className="md:grid items-center overflow-hidden min-h-screen p-16 bg-[#f5e6e0] grid-cols-3"
     >
       <div className="col-span-2">
-        <h2 className="mb-2 text-7xl">Summer Sale Stylish</h2>
-        <h2 className="mb-3 text-8xl">Womens</h2>
+        <h2 className="mb-2 text-6xl md:text-7xl">Summer Sale Stylish</h2>
+        <h2 className="mb-3 text-7xl md:text-8xl">Womens</h2>
         <div className="text-[#222222]">
           <button className="text-lg font-medium">Discover More</button>
           <div className="w-20 transition-all hover:w-[120px] h-1 bg-[#222222]"></div>
         </div>
       </div>
       <div>
-        <img className="h-full" src={banner1} alt="" />
+        <div data-aos="fade-left">
+          <img className="h-full" src={banner1} alt="" />
+        </div>
       </div>
     </div>
   );

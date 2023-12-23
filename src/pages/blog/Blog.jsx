@@ -7,7 +7,7 @@ const Blog = () => {
     <div>
       <PageTitle text={"Blog"} />
 
-      <div className="grid my-16 items-center gap-3 grid-cols-2">
+      <div className="md:grid my-16 items-center gap-3 grid-cols-2">
         <div className="card rounded-none bg-base-100 shadow-xl">
           <figure>
             <img src={blog1} />

@@ -24,10 +24,10 @@ const Products = () => {
       </div>
 
       <div className="grid grid-cols-12">
-        <div className="col-span-2">
+        <div className="col-span-2 md:block hidden">
           filter
         </div>
-        <div className="col-span-10 gap-3 grid grid-cols-3">
+        <div className="col-span-10 gap-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {products?.map((product) => (
             <Product product={product} key={product._id} />
           ))}

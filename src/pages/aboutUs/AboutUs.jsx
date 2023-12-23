@@ -6,7 +6,7 @@ const AboutUs = () => {
     <div>
       <img src={aboutimg} alt="" />
 
-      <div className=" p-10">
+      <div className="p-10">
         <h2 className="text-3xl">OUR STORY</h2>
         <p className="text-lg mt-6 mb-4 font-semibold">
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
@@ -26,7 +26,7 @@ const AboutUs = () => {
           they're great.
         </p>
 
-        <div className="grid grid-cols-2 mt-6 gap-5 items-center">
+        <div className="md:grid grid-cols-2 mt-6 gap-5 items-center">
           <div>
             <img className="w-full" src={about2} alt="" />
           </div>

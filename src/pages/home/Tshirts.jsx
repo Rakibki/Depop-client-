@@ -3,7 +3,7 @@ import banner_2 from "../../assets/image/banner_2.jpg";
 
 const Tshirts = () => {
   return (
-    <div className="grid gap-2 grid-cols-2">
+    <div data-aos="fade-up-right" className="md:grid mt-16 gap-2 grid-cols-2">
       <div className="text-white relative">
         <img src={banner_1} alt="" />
         <div className="absolute bottom-5 left-6">
@@ -18,7 +18,7 @@ const Tshirts = () => {
         </div>
       </div>
 
-      <div className="relative">
+      <div data-aos="fade-left" className="relative">
         <img src={banner_2} alt="" />
         <div className="absolute bottom-5 left-6">
           <h2 className="text-lg">Starting At $19</h2>

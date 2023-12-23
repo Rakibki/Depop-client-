@@ -6,8 +6,8 @@
     "price": 449,
     "ratting": 4.5,
     "quantity": 10,
-    "sime": "small",
-    "color": "black"
+    "sime": ["small",  "medium", "large"],
+    "color": ["yellow", "blue", "red", "white", "black", "orange"]
   },
   {
     "title": "Cropped Faux Leather Jacket",
@@ -16,8 +16,8 @@
     "price": 249,
     "ratting": 4.5,
     "quantity": 10,
-    "sime": "medium",
-    "color": "yellow"
+    "sime": ["small",  "medium", "large"],
+    "color": ["yellow", "blue", "red", "white", "black", "orange"]
   },
   {
     "title": "Calvin Shorts",
@@ -26,8 +26,8 @@
     "price": 200,
     "ratting": 4.5,
     "quantity": 10,
-    "sime": "large",
-    "color": "red"
+    "sime": ["small",  "medium", "large"],
+    "color": ["yellow", "blue", "red", "white", "black", "orange"]
   },
   {
     "title": "Kirby T-Shirt",
@@ -36,8 +36,8 @@
     "price": 50,
     "ratting": 5,
     "quantity": 10,
-    "sime": "medium",
-    "color": "orange"
+    "sime": ["small",  "medium", "large"],
+    "color": ["yellow", "blue", "red", "white", "black", "orange"]
   },
   {
     "title": "Cableknit Shawl",
@@ -46,8 +46,8 @@
     "price": 150,
     "ratting": 5,
     "quantity": 10,
-    "sime": "large",
-    "color": "yellow"
+    "sime": ["small",  "medium", "large"],
+    "color": ["yellow", "blue", "red", "white", "black", "orange"]
   },
   {
     "title": "Colorful Jacket",
@@ -56,8 +56,8 @@
     "price": 130,
     "ratting": 5,
     "quantity": 10,
-    "sime": "small",
-    "color": "yellow"
+    "sime": ["small",  "medium", "large"],
+    "color": ["yellow", "blue", "red", "white", "black", "orange"]
   },
   {
     "title": "Shirt In Botanical Cheetah Print",
@@ -66,8 +66,8 @@
     "price": 199,
     "ratting": 5,
     "quantity": 10,
-    "sime": "large",
-    "color": "blue"
+    "sime": ["small",  "medium", "large"],
+    "color": ["yellow", "blue", "red", "white", "black", "orange"]
   },
   {
     "title": "Cotton Jersey T-Shirt",
@@ -76,8 +76,8 @@
     "price": 99,
     "ratting": 3,
     "quantity": 10,
-    "sime": "small",
-    "color": "white"
+    "sime": ["small",  "medium", "large"],
+    "color": ["yellow", "blue", "red", "white", "black", "orange"]
   },
   {
     "title": "Cotton Jersey T-Shirt",
@@ -86,7 +86,7 @@
     "price": 99,
     "ratting": 3,
     "quantity": 10,
-    "sime": "medium",
-    "color": "black"
+    "sime": ["small", "medium", "large"],
+    "color": ["yellow", "blue", "red", "white", "black", "orange"]
   }
 ]

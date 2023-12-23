@@ -77,7 +77,7 @@ const ProdactDetaisl = () => {
     <div>
       <PageTitle text={"product Details"} />
 
-      <div className="m-10 gap-3 h-[500px] overflow-hidden grid grid-cols-2">
+      <div className="m-10 gap-3 min-h-[500px] overflow-hidden md:grid grid-cols-2">
         <div>
           <img className="w-full h-full" src={product?.image} alt="" />
         </div>
@@ -100,6 +100,35 @@ const ProdactDetaisl = () => {
             >
               ADD TO CARD
             </button>
+          </div>
+
+          <div className="mt-6">
+            <div className="flex gap-4 items-center">
+              <div className="text-[#7c7979]">Colors:</div>
+              <div className="flex gap-1">
+                {product?.color?.map((item) => {
+                  return (
+                    <div
+                      style={{ backgroundColor: item }}
+                      key={item._id}
+                      className={`w-4 rounded-full h-4`}
+                    ></div>
+                  );
+                })}
+              </div>
+            </div>
+            <div className="flex mt-4 gap-4 items-center">
+              <div className="text-[#7c7979]">Size:</div>
+              <div className="flex gap-1">
+                {product?.sime?.map((item) => {
+                  return (
+                    <div key={item._id} className={"text-[#2c2b2b]"}>
+                      {item}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </div>

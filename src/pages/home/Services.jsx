@@ -4,7 +4,7 @@ import { GiBackwardTime } from "react-icons/gi";
 
 const Services = () => {
   return (
-    <div className="grid gap-2 mt-6 grid-cols-3">
+    <div className="grid gap-2 mt-16 mb-10 grid-cols-1 md:grid-cols-3">
       <div className="border-[1px] border-[#919191] p-6 rounded-xl">
         <TbTruckDelivery className="text-6xl mx-auto" />
         <h2 className="text-2xl mt-2 text-center">FAST AND FREE DELIVERY</h2>

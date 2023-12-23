@@ -104,7 +104,7 @@ const Navber = () => {
             {navItems}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">
+        <a className="btn md:block hidden btn-ghost text-xl">
           <Link to={"/"}>
             <img src={logo} alt="" />
           </Link>

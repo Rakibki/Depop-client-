@@ -12,6 +12,7 @@
   "dependencies": {
     "@tanstack/react-query": "^5.14.2",
     "antd": "^5.12.5",
+    "aos": "^2.3.4",
     "axios": "^1.6.2",
     "create-icons": "^1.0.0",
     "date-fns": "^3.0.6",

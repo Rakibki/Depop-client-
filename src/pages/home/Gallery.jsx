@@ -1,7 +1,7 @@
 const Gallery = () => {
   return (
     <div>
-      <h1 className="text-4xl text-center my-6">Our Gallery</h1>
+      <h1 className="text-4xl mt-24 text-center my-6">Our Gallery</h1>
       <div className="grid mt-10 grid-cols-2 md:grid-cols-4 gap-4">
         <div className="grid gap-4">
           <div>
