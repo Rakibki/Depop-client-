@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosLocal = axios.create({
-  baseURL: "http://localhost:3001",
+  baseURL: "https://depop-alpha.vercel.app",
 });
 
 const useAxiosLocal = () => {
